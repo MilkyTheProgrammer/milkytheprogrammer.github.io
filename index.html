@@ -1,0 +1,346 @@
+<html lang="en-us"><head>
+    <meta charset="UTF-8">
+    <title>Pun Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">VRChat Modding Docs</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="api" class="btn">Api Docs</a>
+      
+        <a href="awesome" class="btn">Awesome VRC Mods</a>
+      
+        <a href="index" class="btn">About</a>
+      
+        <a href="modding" class="btn">Modding Docs</a>
+      
+        <a href="photon" class="btn">Pun Docs</a>
+      
+        <a href="class=&quot;btn&quot;"></a>
+      
+    
+    </section>
+
+    <section class="main-content">
+      
+      <h1 id="vrchat-pun-docs">VRChat PUN Docs</h1>
+
+<p>Welcome to the VRChat Modding Docs!</p>
+
+<p>This page will be  updated on my freetime with the help of other contributers and team members, you can expect documentation on Event Codes, Operation Codes, and even some basic Code Snippets!</p>
+
+<p>If you would like to contribute please feel free to make a pull request on the github!</p>
+
+<h1 id="documentation">Documentation</h1>
+
+<h2 id="events">Events</h2>
+
+<p><a href="https://doc.photonengine.com/en-us/pun/current/gameplay/rpcsandraiseevent#raiseevent">Click Here for more Info!</a>
+Events are described by using an event code which are described by a byte value (0-255), and their context can be anything that PUN can serialize.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Code</th>
+      <th>Human-Readable Name</th>
+      <th>Other Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Uspeak</td>
+      <td>&nbsp;</td>
+      <td>Used for sending voice data,  takes an array of bytes as it’s datatype</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Executive Messages</td>
+      <td>Kick message</td>
+      <td>System plugin messages</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Master Client Sync</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Cached Event</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>MasterClientSyncFinished</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>VRCEvent</td>
+      <td>&nbsp;</td>
+      <td>Used for sending Remote Procedure Calls (RPC) datatype is an array of bytes</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Interest Management/Update Quality</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>SerializationUnreliable</td>
+      <td>FloatBufferNetworkSerializer</td>
+      <td>Object and Movement Sync takes an array of bytes</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>SDK3 Avatar Syncronization</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Player Moderations</td>
+      <td>&nbsp;</td>
+      <td>Takes a &lt;byte, Object&gt; dictionary and is targeted</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>HeartBeat</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>Avatar Refresh</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>PhysBones</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>BestEvent</td>
+      <td>&nbsp;</td>
+      <td>Best Photon Event</td>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>SendSerialize</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>202</td>
+      <td>PUN Object Instantiation</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>203</td>
+      <td>Terminate PUN Connection</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>204</td>
+      <td>Destroy PUN Object</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>205</td>
+      <td>Clear RPC Cache</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>206</td>
+      <td>SendSerializeReliable</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>207</td>
+      <td>Destroy Player</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>208</td>
+      <td>Assign Master</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>209</td>
+      <td>Request Ownership Transfer</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>210</td>
+      <td>Ownership Transfer</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="operationcodes">OperationCodes</h2>
+
+<p><a href="https://doc-api.photonengine.com/en/pun/v1/class_operation_code.html#details">Click Here for more Info!</a>
+PUN uses these operation code constants interally and should be universal between most games</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Code</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>217</td>
+      <td>GetGameList</td>
+      <td>Get the game list matching a supplied sql filter (SqlListLobby only)</td>
+    </tr>
+    <tr>
+      <td>218</td>
+      <td>SetServerSettings</td>
+      <td>Operation to set some server settings. Used with different parameters on various servers</td>
+    </tr>
+    <tr>
+      <td>219</td>
+      <td>WebRpc</td>
+      <td>WebRPC Operation</td>
+    </tr>
+    <tr>
+      <td>220</td>
+      <td>GetRegions</td>
+      <td>Get list of regional servers from a NameServer.</td>
+    </tr>
+    <tr>
+      <td>221</td>
+      <td>GetLobbyStats</td>
+      <td>Request statistics about a specific list of lobbies (their user and game count).</td>
+    </tr>
+    <tr>
+      <td>222</td>
+      <td>FindFriends</td>
+      <td>Request the rooms and online status for a list of friends (by name, which should be unique).</td>
+    </tr>
+    <tr>
+      <td>223</td>
+      <td>AuthenticationValues</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>226</td>
+      <td>JoinGame</td>
+      <td>Join game (by name)</td>
+    </tr>
+    <tr>
+      <td>227</td>
+      <td>CreateGame</td>
+      <td>Creates a game (or fails if name exists)</td>
+    </tr>
+    <tr>
+      <td>228</td>
+      <td>LeaveLobby</td>
+      <td>Leaves lobby (on master)</td>
+    </tr>
+    <tr>
+      <td>229</td>
+      <td>JoinLobby</td>
+      <td>Joins Lobby (on master)</td>
+    </tr>
+    <tr>
+      <td>230</td>
+      <td>Authenticate</td>
+      <td>Authenticates this peer and connects to a virtual application</td>
+    </tr>
+    <tr>
+      <td>231</td>
+      <td>AuthenticateOnce</td>
+      <td>Authenticates this peer and connects to a virtual application</td>
+    </tr>
+    <tr>
+      <td>248</td>
+      <td>ChangeGroups</td>
+      <td>Operation code to change interest groups in Rooms (Lite application and extending ones).</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>ExchangeKeysForEncryption</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>251</td>
+      <td>GetProperties</td>
+      <td>Get Properties</td>
+    </tr>
+    <tr>
+      <td>252</td>
+      <td>SetProperties</td>
+      <td>Set Properties</td>
+    </tr>
+    <tr>
+      <td>253</td>
+      <td>UpdateProperties</td>
+      <td>Update Properties</td>
+    </tr>
+    <tr>
+      <td>254</td>
+      <td>Leave</td>
+      <td>Code for OpLeave, to get out of a Room</td>
+    </tr>
+    <tr>
+      <td>255 / ByteMaxValue</td>
+      <td>Join</td>
+      <td>Code for OpJoin,  to get into a room.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="why-am-i-getting-banned">Why am I getting banned?</h2>
+
+<p>VRChat for the most part only has one automated system for bans, and that is through photon, so please be careful when trying anything out, or use an alt account &amp; a vpn.</p>
+
+<p>These are some frequest causes for bans when interacting with photon on VRChat, please double check everything is correct before you attempt anything in-game.</p>
+
+<ul>
+  <li>You are sending an incorrect datatype</li>
+  <li>EventOptions paramaters are invalid</li>
+  <li>You are surpassing a ratelimit</li>
+  <li>You are sending impossible data (EX: Null data through Uspeak/Event 1)</li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/vrchatmoddingdocs/vrchatmoddingdocs.github.io">VRChat Modding Docs</a> is maintained by <a href="https://github.com/vrchatmoddingdocs">The VRC Mod Docs Team</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  
+
+</body></html>
